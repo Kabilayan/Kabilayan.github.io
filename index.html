@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kabilayan Vasanthakumar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE occasion – a personal portfolio website, confident and precise
+   IDEA an engineer's route map: one line from finance to ML/AI engineering, each job a station
+   PICTURE the career route drawn large in the hero, a token travelling to the next station
+   COLOUR white ground, ink #10131a, prussian #0b4f8a leads, carmine #c1121f marks "next"
+   TYPE Literata 600 display + Inter text
+   LAYOUT laptop: name across the top, route full width beneath; phone: name, vertical route, sections stacked */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0f1217);--ink:light-dark(#10131a,#e8ebf2);--mute:light-dark(#4a5160,#a7afbf);--line:light-dark(#d9dee8,#2a313d);--blue:light-dark(#0b4f8a,#7fb6ea);--red:light-dark(#c1121f,#ff6b74);--tint:light-dark(#eef4fb,#151c27);--card:light-dark(#ffffff,#131820)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:72px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:Literata,Georgia,serif;font-weight:600;letter-spacing:-.02em;line-height:1.08;margin:0;text-wrap:balance}
+h1{font-size:clamp(38px,6vw,64px)}
+h2{font-size:clamp(28px,3.4vw,40px);margin-bottom:18px}
+h3{font-size:21px}
+p{margin:0 0 12px;max-width:68ch}
+a{color:var(--blue)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding-block:clamp(36px,5vw,72px);padding-left:max(5vw,16px);padding-right:max(5vw,16px)}
+.tint{background:var(--tint)}
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;padding:12px max(5vw,16px)}
+nav b{font-family:Literata,serif;font-size:19px;margin-right:auto}
+nav a{color:var(--ink);text-decoration:none;font-size:15px;padding:8px 0}
+nav a:hover{color:var(--blue)}
+.hero{padding-bottom:0}
+.lead{font-size:clamp(18px,2vw,21px);color:var(--mute);margin-top:14px;max-width:60ch}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:20px;font-size:15px}
+.facts span{white-space:normal}
+.facts b{color:var(--blue)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--blue)}
+.btn.solid{background:var(--blue);color:var(--bg)}
+.btn.ghost{color:var(--blue)}
+.route{position:relative;height:300px;margin-top:28px;background:var(--tint);border-top:1px solid var(--line)}
+.route svg{position:absolute;inset:0;width:100%;height:100%}
+svg text{font-family:Inter,sans-serif;paint-order:stroke;stroke:var(--tint);stroke-width:4px}
+.grid2{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,4vw,56px);align-items:start}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:22px}
+.panel h3{margin-bottom:10px}
+ul.plain{list-style:none;margin:0;padding:0}
+ul.plain li{padding:8px 0;border-bottom:1px solid var(--line)}
+ul.plain li:last-child{border-bottom:0}
+.jobs{display:grid;gap:0}
+.job{display:grid;grid-template-columns:minmax(9em,auto) minmax(0,1fr);gap:8px 28px;padding:22px 0;border-top:1px solid var(--line)}
+.job time{font-weight:600;color:var(--blue);white-space:nowrap;font-size:15px}
+.job h3{margin-bottom:4px}
+.job .org{color:var(--mute);margin-bottom:8px}
+.job ul{margin:0;padding-left:18px}
+.job li{margin:4px 0}
+.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.proj{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
+.proj .art{background:var(--tint);height:170px;border-bottom:1px solid var(--line)}
+.proj .art svg{width:100%;height:100%;display:block}
+.proj .body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.tag{font-size:13px;padding:3px 10px;border-radius:99px;border:1px solid var(--line);color:var(--mute)}
+.note{font-size:14px;color:var(--mute)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(15em,1fr));gap:20px}
+.certs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.cert .issuer{color:var(--blue);font-weight:600;font-size:15px}
+.cert time{display:block;color:var(--mute);font-size:15px;margin-bottom:8px}
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:center}
+.contact dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px 18px}
+.contact dt{font-weight:600}
+.contact dd{margin:0;overflow-wrap:anywhere}
+.copy{min-height:44px;padding:0 16px;border-radius:6px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;cursor:pointer}
+footer{border-top:1px solid var(--line);color:var(--mute);font-size:14px}
+@media(max-width:900px){.grid2,.contact{grid-template-columns:minmax(0,1fr)}.certs{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:720px){.projects{grid-template-columns:minmax(0,1fr)}.route{height:440px}}
+@media(max-width:600px){.job{grid-template-columns:minmax(0,1fr);gap:4px}nav .wrap{gap:4px 16px}nav b{width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#token{display:none}}
+</style>
+</head>
+<body>
+<nav aria-label="Main"><div class="wrap">
+<b>Kabilayan Vasanthakumar</b>
+<a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a>
+</div></nav>
+
+<header class="band hero"><div class="wrap">
+<h1>Kabilayan Vasanthakumar</h1>
+<p class="lead">Full Stack Developer and final-year BSc (Hons) Data Science undergraduate, building a career as an ML/AI Engineer. I bring three years of corporate finance experience to the software and machine learning systems I build.</p>
+<div class="facts">
+<span><b>Now:</b> Full Stack Developer, CoreNova Tech</span>
+<span><b>Studying:</b> BSc (Hons) Data Science, London Metropolitan University</span>
+<span><b>Based in:</b> Colombo, Sri Lanka</span>
+</div>
+<div class="cta">
+<a class="btn solid" href="#projects">See my projects</a>
+<a class="btn ghost" href="#contact">Get in touch</a>
+</div>
+</div></header>
+<div class="route" aria-label="Career route from finance to ML/AI engineering"><svg id="route" role="img" aria-label="Career route: Finance (2021 to 2024), HND Software Engineering, Noodlecode (2025 to now), CoreNova Tech (2026), BSc Data Science (2027), next: ML/AI Engineer"></svg></div>
+
+<section id="about" class="band"><div class="wrap grid2">
+<div>
+<h2>About me</h2>
+<p>My route into technology started in finance. At Infomate and John Keells IT, part of John Keells Holdings, I worked in SAP FICO, handling invoicing, reconciliations and financial reporting. I started automating repetitive work with Microsoft Power Automate, and the hours it saved showed me how much value good software creates.</p>
+<p>That led me to study software engineering and then data science. Today I build full-stack web applications at CoreNova Tech and part-time at Noodlecode. I also work part-time as a Home Network Consultant for TP-Link network products and install smart home systems, from smart switches to smart accessories. My final-year project, RecruitIQ, uses natural language processing to screen resumes and match candidates to jobs.</p>
+<p>I am most interested in machine learning, NLP, computer vision, robotics and IoT. My next step is an internship in machine learning, AI or data science, followed by a Master's in AI/ML Engineering in Germany.</p>
+</div>
+<div class="panel">
+<h3>What I bring</h3>
+<ul class="plain">
+<li>Applied NLP and machine learning: TF-IDF, Sentence-BERT, skill-gap analysis</li>
+<li>Full-stack delivery with Django REST, PostgreSQL, React and TypeScript</li>
+<li>Business understanding from three years in finance and SAP FICO</li>
+<li>Process automation with Microsoft Power Automate</li>
+<li>Hands-on home networking and smart home (IoT) installation</li>
+<li>English and Tamil (fluent), Sinhala (intermediate)</li>
+</ul>
+</div>
+</div></section>
+
+<section id="experience" class="band tint"><div class="wrap">
+<h2>Experience</h2>
+<div class="jobs" id="jobs"></div>
+</div></section>
+
+<section id="projects" class="band"><div class="wrap">
+<h2>Projects</h2>
+<div class="projects" id="projlist"></div>
+</div></section>
+
+<section id="skills" class="band tint"><div class="wrap">
+<h2>Skills</h2>
+<div class="skills" id="skilllist"></div>
+</div></section>
+
+<section id="certifications" class="band"><div class="wrap">
+<h2>Certifications and education</h2>
+<div class="certs" id="certlist"></div>
+<div class="panel" style="margin-top:24px">
+<h3>Education</h3>
+<ul class="plain">
+<li><b>BSc (Hons) Data Science</b> – London Metropolitan University, ESOFT Metro Campus · expected February 2027</li>
+<li><b>Higher National Diploma in Software Engineering</b> – Cardiff Metropolitan University, ICBT Campus</li>
+<li><b>GCE Advanced and Ordinary Level</b> – Royal College, Colombo</li>
+</ul>
+</div>
+</div></section>
+
+<section id="contact" class="band tint"><div class="wrap contact">
+<div>
+<h2>Let's talk</h2>
+<p>I am looking for internships in machine learning, AI and data science. I would be glad to hear from recruiters, engineers and anyone working on interesting problems.</p>
+</div>
+<div class="panel">
+<dl>
+<dt>Email</dt><dd><a href="mailto:kabilayanv@gmail.com">kabilayanv@gmail.com</a></dd>
+<dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/kabilayan-vasanthakumar-b5b9671a1">linkedin.com/in/kabilayan-vasanthakumar-b5b9671a1</a></dd>
+<dt>GitHub</dt><dd><a href="https://github.com/Kabilayan">github.com/Kabilayan</a></dd>
+<dt>Location</dt><dd>Colombo, Sri Lanka</dd>
+</dl>
+<p style="margin-top:16px"><button class="copy" id="copy" type="button">Copy email address</button> <span id="copied" class="note" aria-live="polite"></span></p>
+</div>
+</div></section>
+
+<footer class="band" style="padding-block:24px"><div class="wrap">Kabilayan Vasanthakumar · Full Stack Developer · Aspiring ML/AI Engineer · Colombo, Sri Lanka</div></footer>
+
+<script>
+{
+const jobs=[
+{t:'2026 – Present',r:'Full Stack Developer',o:'CoreNova Tech · custom software development',b:['Develop web and software solutions for clients as part of a development team.']},
+{t:'Jan 2025 – Present',r:'Junior Full Stack Developer (part-time)',o:'Noodlecode · hybrid',b:['Fixed bugs across web applications, improving their stability and reliability.','Learned Figma for UI/UX design work.']},
+{t:'Present',r:'Home Network Consultant (part-time)',o:'TP-Link network products · smart home projects',b:['Advise customers on home networking solutions using TP-Link network products.','Configure and install smart switches and smart home accessories in homes.']},
+{t:'Mar 2023 – Aug 2024',r:'Finance Executive',o:'John Keells IT, John Keells Holdings PLC',b:['Automated customer invoice distribution and daily exchange-rate alerts with Microsoft Power Automate.','Managed customer and vendor invoicing, consultancy payments and debtor follow-ups in SAP.']},
+{t:'Feb 2021 – Mar 2023',r:'Executive Finance Apprentice',o:'Infomate (Pvt) Ltd, John Keells Holdings PLC',b:['Worked across accounts receivable, accounts payable, general ledger, bank reconciliation and fixed assets in SAP.','Prepared balance sheets, profit and loss statements and VAT schedules for group companies.','Trained end users on SAP modules and Excel-based reporting.']}
+];
+document.getElementById('jobs').innerHTML=jobs.map(j=>`<div class="job"><time>${j.t}</time><div><h3>${j.r}</h3><div class="org">${j.o}</div><ul>${j.b.map(x=>`<li>${x}</li>`).join('')}</ul></div></div>`).join('');
+
+const ink='var(--blue)',red='var(--red)';
+const art={
+recruit:`<svg viewBox="0 0 400 170" preserveAspectRatio="xMidYMid meet"><g fill="none" stroke="${ink}" stroke-width="2.5">
+<path d="M40 30h48l16 16v90H40z"/><path d="M88 30v16h16"/><path d="M52 66h40M52 80h40M52 94h30M52 108h36"/>
+<path d="M118 85h40" marker-end="url(#a1)"/><circle cx="196" cy="85" r="30"/><path d="M182 78h28M182 86h20M182 94h24"/>
+<path d="M234 85h40" marker-end="url(#a1)"/>
+<path d="M290 120v-60M310 120v-40M330 120v-75M350 120v-25"/></g>
+<path d="M330 120v-75" stroke="${red}" stroke-width="10"/>
+<defs><marker id="a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--blue)"/></marker></defs></svg>`,
+biz:`<svg viewBox="0 0 400 170"><g fill="none" stroke="${ink}" stroke-width="2.5">
+<rect x="40" y="35" width="80" height="100" rx="4"/><path d="M54 58h52M54 74h52M54 90h36M54 112h52"/>
+<rect x="160" y="70" width="70" height="55" rx="3"/><path d="M160 88h70M195 70v18"/>
+<path d="M265 80h70v40h-70zM335 92h25l15 16v12h-40"/><circle cx="285" cy="124" r="9"/><circle cx="355" cy="124" r="9"/></g>
+<path d="M54 112h52" stroke="${red}" stroke-width="4"/></svg>`,
+web:`<svg viewBox="0 0 400 170"><g fill="none" stroke="${ink}" stroke-width="2.5">
+<rect x="70" y="28" width="260" height="116" rx="6"/><path d="M70 48h260"/><circle cx="84" cy="38" r="3"/><circle cx="96" cy="38" r="3"/><circle cx="108" cy="38" r="3"/>
+<rect x="88" y="62" width="110" height="64"/><path d="M216 66h96M216 82h80M216 98h90"/></g>
+<rect x="216" y="110" width="56" height="16" rx="3" fill="${red}"/></svg>`,
+shop:`<svg viewBox="0 0 400 170"><g fill="none" stroke="${ink}" stroke-width="2.5">
+<path d="M150 60h100l-10 80h-80z"/><path d="M175 60c0-30 50-30 50 0"/>
+<rect x="60" y="70" width="50" height="50" rx="4"/><rect x="290" y="70" width="50" height="50" rx="4"/></g>
+<circle cx="200" cy="100" r="12" fill="${red}"/></svg>`,
+home:`<svg viewBox="0 0 400 170"><g fill="none" stroke="${ink}" stroke-width="2.5">
+<path d="M120 85l80-55 80 55"/><path d="M135 75v70h130v-70"/><rect x="185" y="105" width="30" height="40"/>
+<rect x="150" y="92" width="22" height="30" rx="3"/><path d="M300 60a30 30 0 0 1 0 50M315 45a50 50 0 0 1 0 80"/><circle cx="290" cy="85" r="4"/></g>
+<rect x="156" y="100" width="10" height="8" rx="2" fill="${red}"/></svg>`,
+cafe:`<svg viewBox="0 0 400 170"><g fill="none" stroke="${ink}" stroke-width="2.5">
+<path d="M150 70h90v30a45 45 0 0 1-90 0z"/><path d="M240 80h14a14 14 0 0 1 0 28h-16"/><path d="M130 146h130"/>
+<path d="M175 30c-8 12 8 18 0 30M200 26c-8 12 8 18 0 30M225 30c-8 12 8 18 0 30"/></g>
+<path d="M160 84h70" stroke="${red}" stroke-width="5"/></svg>`,
+dog:`<svg viewBox="0 0 400 170"><g fill="none" stroke="${ink}" stroke-width="2.5">
+<rect x="160" y="16" width="80" height="140" rx="12"/><path d="M190 28h20"/>
+<path d="M176 110h48l-6 20h-36z"/><path d="M180 70l8-14 8 14M204 70l8-14 8 14"/><path d="M182 76h36v16a18 18 0 0 1-36 0z"/></g>
+<circle cx="200" cy="120" r="5" fill="${red}"/></svg>`
+};
+const projects=[
+{a:'recruit',h:'RecruitIQ',s:'Final-year project · NLP resume screening and job matching',d:'Extracts text from PDF resumes, classifies them with TF-IDF, matches candidates to job descriptions with Sentence-BERT semantic similarity and explains each candidate’s skill gaps, in a branded multi-page Streamlit web app.',t:['Python','scikit-learn','Sentence-BERT','Streamlit','NLP'],n:'Assessed project – code kept private.'},
+{a:'biz',h:'Integrated Invoicing, Inventory, Delivery & Finance System',s:'Client project · in development',d:'Order-to-invoice workflow with approvals, expiry-first stock control, delivery dispatch, an installable driver web app, part payments, cheque tracking, per-user permissions and tamper-evident audit logs.',t:['Django REST','PostgreSQL','React','TypeScript','Docker'],n:'Built for a private client – details kept confidential.'},
+{a:'web',h:'Premium Business Website',s:'Client project',d:'Designed and built a premium, fully functional website for a business, from layout and content structure to responsive pages.',t:['Web development','Responsive design'],n:'Client name kept confidential at the owner’s request.'},
+{a:'home',h:'Smart Home Installations',s:'Ongoing projects · part-time',d:'Configuring and installing smart switches and smart home accessories in homes, and setting up the home networks they run on with TP-Link network products.',t:['Smart home','IoT','Home networking','TP-Link'],n:''},
+{a:'shop',h:'SL Heritoria',s:'HND final group project',d:'A multi-seller e-commerce platform for Sri Lankan heritage products, with seller and buyer flows and an admin panel.',t:['PHP','JavaScript','MySQL','HTML/CSS'],n:''},
+{a:'cafe',h:'Gallery Cafe',s:'Web application',d:'A dynamic cafe website with user accounts and database-driven content.',t:['PHP','JavaScript','MySQL'],n:''},
+{a:'dog',h:'Dog Nutrition App',s:'Android app',d:'An Android app for finding dog food and nutrition products, with search, sorting and a cart.',t:['Java','Android Studio'],n:''}
+];
+document.getElementById('projlist').innerHTML=projects.map(p=>`<article class="proj"><div class="art" aria-hidden="true">${art[p.a]}</div><div class="body"><h3>${p.h}</h3><div class="note">${p.s}</div><p>${p.d}</p>${p.n?`<div class="note">${p.n}</div>`:''}<div class="tags">${p.t.map(x=>`<span class="tag">${x}</span>`).join('')}</div></div></article>`).join('');
+
+const skills=[
+['Machine learning and data',['Python','scikit-learn','NLP','Sentence-BERT','TF-IDF','pandas','SQL']],
+['Web and app development',['Django','Django REST Framework','React','TypeScript','JavaScript','PHP','Java (Android)','Streamlit']],
+['Databases and tools',['PostgreSQL','MySQL','Git','Docker','Figma','VS Code','draw.io']],
+['Networking and IoT',['TP-Link home networking','Wi-Fi setup','Smart switches','Smart home accessories']],
+['Business and automation',['SAP FICO','Microsoft Power Automate','Financial reporting','Microsoft Office']]
+];
+document.getElementById('skilllist').innerHTML=skills.map(([h,l])=>`<div class="panel"><h3>${h}</h3><div class="tags">${l.map(x=>`<span class="tag">${x}</span>`).join('')}</div></div>`).join('');
+
+const certs=[
+{h:'Introduction to Data Science',i:'Cisco Networking Academy',t:'November 2025',d:'Verified badge through Credly. Data analytics, data engineering, data science and AI/ML roles.',u:''},
+{h:'AI for Beginners',i:'HP LIFE · HP Foundation',t:'June 2025',d:'Key AI concepts and applications, why data matters to AI, AI in business and its ethics.',u:''},
+{h:'Big Data 101 (BD0101EN)',i:'IBM · Cognitive Class',t:'March 2025',d:'Characteristics of big data, big data technologies and business use cases.',u:'https://courses.cognitiveclass.ai/certificates/60c58c71033847cdb90ca7ee54dc94ee'}
+];
+document.getElementById('certlist').innerHTML=certs.map(c=>`<div class="panel cert"><div class="issuer">${c.i}</div><h3>${c.h}</h3><time>${c.t}</time><p>${c.d}</p>${c.u?`<a href="${c.u}">Verify certificate</a>`:''}</div>`).join('');
+
+const stations=[['Finance','2021 – 2024','SAP FICO, automation'],['Software Engineering','HND, ICBT','Cardiff Met'],['Noodlecode','2025 – now','Junior Full Stack'],['CoreNova Tech','2026 – now','Full Stack Developer'],['Data Science','BSc, 2027','RecruitIQ'],['ML/AI Engineer','Next','Master’s in Germany']];
+const s=document.getElementById('route');
+const draw=()=>{
+const W=s.clientWidth,H=s.clientHeight,vert=W<720,n=stations.length;
+let pts=[];
+if(!vert){const m=Math.max(70,W*.07);for(let i=0;i<n;i++)pts.push([m+i*(W-2*m)/(n-1),H*0.42+(i%2?28:-28)]);}
+else{const m=40;for(let i=0;i<n;i++)pts.push([W*0.18,m+i*(H-2*m)/(n-1)]);}
+const path='M'+pts.map(p=>p.join(' ')).join(' L');
+let g=`<path d="${path}" fill="none" stroke="var(--blue)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>`;
+g+=`<path d="M${pts[n-2].join(' ')} L${pts[n-1].join(' ')}" fill="none" stroke="var(--red)" stroke-width="7" stroke-dasharray="2 12" stroke-linecap="round"/>`;
+pts.forEach((p,i)=>{
+const last=i===n-1,[a,b,c]=stations[i];
+g+=`<circle cx="${p[0]}" cy="${p[1]}" r="${last?15:12}" fill="var(--tint)" stroke="${last?'var(--red)':'var(--blue)'}" stroke-width="5"/>`;
+if(!vert){const up=i%2===0,ty=up?p[1]-34:p[1]+44;
+g+=`<text x="${p[0]}" y="${ty}" text-anchor="middle" font-size="15" font-weight="600" fill="var(--ink)">${a}</text>`;
+g+=`<text x="${p[0]}" y="${ty+(up?-19:19)}" text-anchor="middle" font-size="13" fill="${last?'var(--red)':'var(--mute)'}">${up?b:b}</text>`;
+g+=`<text x="${p[0]}" y="${ty+(up?-37:37)}" text-anchor="middle" font-size="13" fill="var(--mute)">${W<1000?'':c}</text>`;}
+else{g+=`<text x="${p[0]+30}" y="${p[1]-2}" font-size="15" font-weight="600" fill="var(--ink)">${a}</text><text x="${p[0]+30}" y="${p[1]+17}" font-size="13" fill="${last?'var(--red)':'var(--mute)'}">${b} · ${c}</text>`;}
+});
+g+=`<circle id="token" r="6" fill="var(--red)"><animateMotion dur="7s" repeatCount="indefinite" path="${path}"/></circle>`;
+s.innerHTML=g;
+};
+const ro=new ResizeObserver(draw);ro.observe(s);
+
+const btn=document.getElementById('copy'),msg=document.getElementById('copied');
+btn.addEventListener('click',async()=>{try{await navigator.clipboard.writeText('kabilayanv@gmail.com');msg.textContent='Copied.';}catch(e){msg.textContent='Copy failed – the address is kabilayanv@gmail.com';}});
+}
+</script>
+</body>
+</html>
